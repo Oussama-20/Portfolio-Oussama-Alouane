@@ -1,101 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projet Agri-tech</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet Agri-tech</title>
 
-    <!-- Icônes Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="icon" type="images/png" href="images/Design sans titre.png">
 
-    <style>
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-      }
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
 
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 40px 50px;
+      margin: 40px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ec1839;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      color: #222;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 20px 0;
+    }
+
+    ul li {
+      background: #f9f9f9;
+      margin-bottom: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: #444;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: #ffe4e8;
+    }
+
+    ul li i {
+      margin-right: 10px;
+      color: #ec1839;
+      font-size: 1.1rem;
+    }
+
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 25px;
+      background-color: #ec1839;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-back-home:hover {
+      background-color: #b9122c;
+      transform: translateY(-2px);
+    }
+
+    .btn-back-home i {
+      margin-right: 8px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
       .container {
-        max-width: 700px;
-        background: #fff;
-        padding: 30px 40px;
-        margin: 40px auto;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+        padding: 25px;
       }
-
       h1 {
-        font-size: 2.4rem;
-        color:#ec1839; /* Vert naturel */
-        margin-bottom: 15px;
+        font-size: 2rem;
       }
-
-      h3 {
-        color: #4a4a4a;
-        margin-top: 30px;
-        margin-bottom: 12px;
-        font-weight: 600;
-      }
-
-      p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #555;
-      }
-
-      ul {
-        list-style: disc inside;
-        padding-left: 0;
-        margin-top: 0;
-        margin-bottom: 20px;
-        color: #555;
-      }
-
-      ul li {
-        margin-bottom: 6px;
-        font-weight: 500;
-      }
-
-      .btn-back-home {
-        display: inline-block;
-        margin-top: 25px;
-        background-color: #ec1839;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-        font-size: 1rem;
-      }
-
-      .btn-back-home:hover {
-        background-color: #ec1839;
-      }
-
-      .btn-back-home i {
-        margin-right: 8px;
-      }
-    </style>
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Projet Agri-tech</h1>
+    <p class="subtitle">Solution numérique pour une agriculture moderne et intelligente</p>
 
-    <h3>Objectif du projet</h3>
+    <h3><i class="fas fa-bullseye"></i> Objectif du projet</h3>
     <p>
-      Ce projet vise à développer une solution innovante pour améliorer la gestion agricole en utilisant des technologies modernes et adaptées. Il facilite la production, la récolte, et le suivi des cultures.
+      Ce projet vise à développer une solution innovante pour améliorer la gestion agricole en utilisant des technologies modernes et adaptées.
+      Il facilite la production, la récolte et le suivi des cultures, tout en optimisant les ressources.
     </p>
 
-    <h3>Technologies utilisées</h3>
+    <h3><i class="fas fa-tools"></i> Technologies utilisées</h3>
     <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
+      <li><i class="fab fa-html5"></i> HTML5</li>
+      <li><i class="fab fa-css3-alt"></i> CSS3</li>
+      <li><i class="fab fa-js-square"></i> JavaScript</li>
+      <li><i class="fab fa-php"></i> PHP</li>
+      <li><i class="fab fa-laravel"></i> Laravel</li>
+      <li><i class="fas fa-database"></i> MySQL</li>
     </ul>
 
     <a href="../index.html" class="btn-back-home">
