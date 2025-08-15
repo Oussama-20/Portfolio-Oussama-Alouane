@@ -583,6 +583,24 @@ h3.my-profession{
     color: #333;
 }
 
+ .portfolio-item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Taille réduite des images */
+.portfolio-item-inner img {
+    width: 100%;
+    height: 175px; /* plus petit que 200px */
+    object-fit: cover;
+    display: block;
+}
+
 /*Contact*/
 
 .contact-title{
@@ -959,6 +977,12 @@ h3.my-profession{
     color: #0077B5; /* Couleur officielle LinkedIn */
     transform: scale(1.2);
 }
+/* Email */
+.footer-social a[href^="mailto"]:hover {
+    color: #d93025; /* Rouge Gmail */
+    transform: scale(1.2);
+}
+
 
 /* GitHub */
 .footer-social a[href*="github"]:hover {
@@ -972,11 +996,7 @@ h3.my-profession{
     transform: scale(1.2);
 }
 
-/* Facebook */
-.footer-social a[href*="facebook"]:hover {
-    color: #1877F2; /* Couleur officielle Facebook */
-    transform: scale(1.2);
-}
+
 
 
 .footer-bottom p {
@@ -1090,6 +1110,7 @@ h3.my-profession{
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
+
 
 
 

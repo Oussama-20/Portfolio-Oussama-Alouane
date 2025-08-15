@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projet Agri-tech</title>
+  <title>Student Management System (CRUD)</title>
 
   <!-- Icônes Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="icon" type="images/png" href="images/Design sans titre.png">
-
+  <link rel="icon" type="images/png" href="images/logo.png">
 
   <style>
     body {
@@ -57,13 +56,48 @@
       color: #555;
     }
 
-    ul {
+    /* Liste avec icônes (fonctionnalités) */
+    .roles-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .roles-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: #f9f9f9;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .roles-list li:hover {
+      background: #e8f9ee;
+    }
+
+    .roles-list li i {
+      font-size: 1.4rem;
+      color: #ec1839;
+      min-width: 30px;
+    }
+
+    .roles-list li h4,
+    .roles-list li strong {
+      margin: 0 0 4px 0;
+      color: #333;
+    }
+
+    /* Liste technologies */
+    ul.tech-list {
       list-style: none;
       padding-left: 0;
       margin: 0 0 20px 0;
     }
 
-    ul li {
+    ul.tech-list li {
       background: #f9f9f9;
       margin-bottom: 8px;
       padding: 10px 14px;
@@ -75,21 +109,34 @@
       transition: background 0.3s ease;
     }
 
-    ul li:hover {
-      background: #ffe4e8;
+    ul.tech-list li:hover {
+      background: #e8f9ee;
     }
 
-    ul li i {
+    ul.tech-list li i {
       margin-right: 10px;
-      color: #ec1839;
+       color: #ec1839;
       font-size: 1.1rem;
     }
 
+    /* Image */
+    .project-image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+
+    /* Bouton retour */
     .btn-back-home {
       display: inline-flex;
       align-items: center;
       margin-top: 25px;
-      background-color: #ec1839;
+      background-color:#ec1839;;
       color: white;
       padding: 10px 20px;
       border-radius: 30px;
@@ -113,41 +160,82 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
-      .container {
-        padding: 25px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
+      .container { padding: 25px; }
+      h1 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Projet Agri-tech</h1>
-    <p class="subtitle">Solution numérique pour une agriculture moderne et intelligente</p>
+ <div class="container">
+    <h1>Projet Student Management System (CRUD)</h1>
+    <p class="subtitle">Application web de gestion des étudiants</p>
 
+    <!-- Objectif -->
     <h3><i class="fas fa-bullseye"></i> Objectif du projet</h3>
     <p>
-      Ce projet vise à développer une solution innovante pour améliorer la gestion agricole en utilisant des technologies modernes et adaptées.
-      Il facilite la production, la récolte et le suivi des cultures, tout en optimisant les ressources.
+      Développer une application web permettant de gérer les informations des étudiants
+      (ajout, lecture, mise à jour, suppression) à l'aide des opérations CRUD.
+      L’interface est simple, responsive et adaptée aux besoins scolaires.
     </p>
 
+
+    <!-- Fonctionnalités -->
+    <h3><i class="fas fa-list-check"></i> Fonctionnalités principales</h3>
+    <ul class="roles-list">
+      <li>
+        <i class="fas fa-user-plus"></i>
+        <div>
+            <h4>Ajouter un étudiant</h4>
+            Ajouter un étudiant via un formulaire complet et validé.
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-eye"></i>
+        <div>
+            <strong>Afficher les données</strong> — Voir la liste des étudiants avec leurs informations.
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-edit"></i>
+        <div>
+            <strong>Modifier</strong> — Mettre à jour les informations existantes.
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-trash-alt"></i>
+        <div>
+            <strong>Supprimer</strong> — Retirer un étudiant avec confirmation.
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-search"></i>
+        <div>
+            <strong>Recherche</strong> — Filtrer les étudiants par nom, prénom ou adresse.
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-bars"></i>
+        <div>
+            <strong>Menu</strong> — Accès aux sections : Students, Teachers, Courses, Enrollment, Payment.
+        </div>
+      </li>
+    </ul>
+
+    <!-- Technologies -->
     <h3><i class="fas fa-tools"></i> Technologies utilisées</h3>
-    <ul>
+    <ul class="tech-list">
       <li><i class="fab fa-html5"></i> HTML5</li>
       <li><i class="fab fa-css3-alt"></i> CSS3</li>
-      <li><i class="fab fa-js-square"></i> JavaScript</li>
-      <li><i class="fab fa-php"></i> PHP</li>
+      <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
       <li><i class="fab fa-laravel"></i> Laravel</li>
       <li><i class="fas fa-database"></i> MySQL</li>
     </ul>
 
+    <!-- Retour -->
     <a href="../index.html" class="btn-back-home">
-      <i class="fas fa-arrow-left"></i> Retour à l'accueil
+        <i class="fas fa-arrow-left"></i> Retour à l'accueil
     </a>
-  </div>
+</div>
 </body>
 </html>

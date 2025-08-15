@@ -107,6 +107,38 @@
     .btn-back-home i {
       margin-right: 8px;
     }
+    .roles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.roles-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; /* المسافة بين الأيقونة والنص */
+    background: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.roles-list li:hover {
+    background: #ffe4e8;
+}
+
+.roles-list li i {
+    font-size: 1.4rem;
+    color: #ec1839;
+    min-width: 30px; /* المسافة الثابتة باش تبقى الأيقونات مصطفة */
+}
+
+.roles-list li h4,
+.roles-list li strong {
+    margin: 0 0 4px 0;
+    color: #333;
+}
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -126,28 +158,63 @@
 </head>
 <body>
   <div class="container">
-    <h1>Projet Agri-tech</h1>
-    <p class="subtitle">Solution numérique pour une agriculture moderne et intelligente</p>
+    <h1>Projet Freelance : Site de Journalisme</h1>
+    <p class="subtitle">Développement d'un site web journalistique sous WordPress</p>
 
+    <!-- Objectif du projet -->
     <h3><i class="fas fa-bullseye"></i> Objectif du projet</h3>
     <p>
-      Ce projet vise à développer une solution innovante pour améliorer la gestion agricole en utilisant des technologies modernes et adaptées.
-      Il facilite la production, la récolte et le suivi des cultures, tout en optimisant les ressources.
+        Ce projet freelance avait pour objectif de créer un site web dynamique pour un média journalistique. 
+        Le site permet de publier, organiser et gérer les articles, actualités et contenus multimédias, 
+        tout en offrant une expérience utilisateur fluide et attractive.
     </p>
 
-    <h3><i class="fas fa-tools"></i> Technologies utilisées</h3>
-    <ul>
-      <li><i class="fab fa-html5"></i> HTML5</li>
-      <li><i class="fab fa-css3-alt"></i> CSS3</li>
-      <li><i class="fab fa-js-square"></i> JavaScript</li>
-      <li><i class="fab fa-php"></i> PHP</li>
-      <li><i class="fab fa-laravel"></i> Laravel</li>
-      <li><i class="fas fa-database"></i> MySQL</li>
+    <!-- Fonctionnalités principales -->
+    <h3><i class="fas fa-list-check"></i> Fonctionnalités principales</h3>
+    <ul class="roles-list">
+        <li>
+            <i class="fas fa-newspaper"></i>
+            <div>
+                <h4>Gestion des articles</h4>
+                Ajout, modification et suppression d'articles, catégories et tags.
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-user-edit"></i>
+            <div>
+                <strong>Administration / Rédacteurs</strong> — Gestion des utilisateurs, rédaction et publication des contenus.
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-images"></i>
+            <div>
+                <strong>Médias</strong> — Gestion des images, vidéos et contenus multimédias associés aux articles.
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-eye"></i>
+            <div>
+                <strong>Interface utilisateur</strong> — Navigation fluide, design responsive et accès facile aux articles pour les visiteurs.
+            </div>
+        </li>
     </ul>
 
+    <!-- Technologies utilisées -->
+    <h3><i class="fas fa-tools"></i> Technologies utilisées</h3>
+    <ul>
+        <li><i class="fab fa-wordpress"></i> WordPress</li>
+        <li><i class="fab fa-html5"></i> HTML5</li>
+        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <li><i class="fas fa-database"></i> MySQL</li>
+        <li><i class="fas fa-paint-brush"></i> Design personnalisé</li>
+    </ul>
+
+    <!-- Bouton retour -->
     <a href="../index.html" class="btn-back-home">
-      <i class="fas fa-arrow-left"></i> Retour à l'accueil
+        <i class="fas fa-arrow-left"></i> Retour à l'accueil
     </a>
-  </div>
+</div>
+
 </body>
 </html>
