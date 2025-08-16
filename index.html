@@ -14,25 +14,28 @@
 <body>
     <div class="main-container">
         <!-- Barre latérale -->
-        <div class="oussama">
-            <div class="logo">
-                <a href="#"><span>A</span>louane</a>
-            </div>
-            <button class="nav-toggler">
-                <span></span>
-            </button>
+         <div class="oussama">
+  <div class="logo">
+    <a href="#"><span>A</span>louane</a>
+  </div>
 
+  <!-- Bouton menu -->
+  <button class="nav-toggler" id="nav-toggler">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-            
-            <ul class="nav">
-                <li><a href="index.html"><i class="fa fa-home"></i> Accueil</a></li>
-                <li><a href="propos.html"><i class="fa fa-user"></i> À propos</a></li>
-                <li><a href="services.html"><i class="fa fa-list"></i> Services</a></li>
-                <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
+  <!-- Navigation -->
+  <ul class="nav" id="nav-menu">
+    <li><a href="index.html"><i class="fa fa-home"></i> Accueil</a></li>
+    <li><a href="propos.html"><i class="fa fa-user"></i> À propos</a></li>
+    <li><a href="services.html"><i class="fa fa-list"></i> Services</a></li>
+    <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+    <li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
+  </ul>
+</div>
 
-            </ul>
-        </div>
 
         <!-- Contenu principal -->
         <div class="main-content">
@@ -645,6 +648,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
+<script>
+    const toggler = document.querySelector(".oussama .nav-toggler");
+const sidebar = document.querySelector(".oussama");
+
+toggler.addEventListener("click", () => {
+  toggler.classList.toggle("active");
+  sidebar.classList.toggle("active");
+});
+</script>
+
+
 
 
 

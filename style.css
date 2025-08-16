@@ -118,7 +118,7 @@ ul{
 }
 
 /*Oussama*/
-
+/* ---- code dyalk nta (PC normal) ---- */
 .oussama{
     width: 270px;
     background: var(--bg-black-100);
@@ -131,16 +131,15 @@ ul{
     align-items: center;
     padding: 30px;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
+    transition: 0.4s ease; /* smooth slide */
 }
 .oussama .logo{
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
-
 }
-
 .oussama .logo a{
     background: var(--bg-black-900);
     font-weight: 700;
@@ -149,7 +148,6 @@ ul{
     font-size: 30px;
     letter-spacing: 5px;
     position: relative;
-
 }
 .oussama .logo a span{
     font-family: 'Clicker Script',cursive;
@@ -164,9 +162,7 @@ ul{
     border-left: 5px solid var(--skin-color);
     bottom: 0;
     left: 0;
-
 }
-
 .oussama .logo a::after{
     content: "";
     position: absolute;
@@ -176,56 +172,14 @@ ul{
     border-right: 5px solid var(--skin-color);
     top: 0;
     right:0;
-
 }
 .oussama .nav{
     margin: 50px;
-
-}
-.oussama .nav-toggler{
-    height: 40px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius: 5px;
-    background: var(--bg-black-100);
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-.oussama .nav-toggler span{
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    display: inline-block;
-    position: relative;
-}
-.oussama .nav-toggler span::before{
-    content: "";
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: -6px;
-    left: 0;
-}
-.oussama .nav-toggler span::after{
-    content: "";
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0;
 }
 .oussama .nav li{
     margin-bottom: 20px;
     display: block;
 }
-
 .oussama .nav li a{
      font-size: 16px;
      font-weight: 600;
@@ -239,6 +193,73 @@ ul{
 .oussama .nav li a i {
     margin-right: 15px;
 }
+
+/* ---- Bouton hamburger ---- */
+.oussama .nav-toggler{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    justify-content: center;
+    align-items: center;
+    display: none; /* par défaut khfiya */
+    z-index: 1100;
+}
+.oussama .nav-toggler span,
+.oussama .nav-toggler span::before,
+.oussama .nav-toggler span::after{
+    height: 2px;
+    width: 11px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+}
+.oussama .nav-toggler span::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.oussama .nav-toggler span::after{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px){
+  /* sidebar ykhtafi */
+  .oussama {
+    left: -270px;
+  }
+  .oussama.active {
+    left: 0; /* yban b slide */
+  }
+  /* hamburger button yban */
+  .oussama .nav-toggler {
+    display: flex;
+  }
+  /* animation X */
+  .oussama .nav-toggler.active span {
+    background: transparent;
+  }
+  .oussama .nav-toggler.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .oussama .nav-toggler.active span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
 
 /*Home*/
 
