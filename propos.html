@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" type="images/png" href="images/Design sans titre.png">
+    
 </head>
 <body>
      <div class="main-container">
@@ -49,8 +49,8 @@
                 <div class="row">
                     <div class="about-text padd-15">
                         <h3>Je suis Oussama Alouane, <span>Développeur Full-Stack</span></h3>
-                        <p>
-                            Ce qui me distingue dans ce domaine, c'est ma discipline quotidienne et ma soif constante d'apprentissage. Le développement web n’est pas seulement un métier pour moi, c’est une passion que je nourris chaque jour avec rigueur et persévérance. J’affronte chaque défi comme une opportunité de grandir, en cherchant toujours à m’améliorer, à comprendre plus en profondeur, et à créer des solutions utiles et intelligentes. Ce sens de l’engagement me pousse à livrer des projets de qualité, stables et orientés utilisateur, même sous pression.
+                          <p>
+                            Ce qui me distingue dans le domaine du <strong>développement web</strong>,c’est mon discipline quotidienne et mon engagement constant envers l’apprentissage. Pour moi, le développement web n’est pas simplement un métier, c’est une véritable passion que je cultive avec rigueur et persévérance. J’aborde chaque défi comme une opportunité de progresser, en cherchant toujours à approfondir mes compétences et à concevoir des solutions digitales intelligentes et performantes. Cet engagement me pousse à livrer des projets de haute qualité, stables et centrés sur l’utilisateur, même sous pression
                         </p>
                     </div>
                 </div>
@@ -102,10 +102,14 @@
      <div class="info-item">
         <p>Email : <span>alouaneoussama07@gmail.com</span></p>
     </div>
-
-    <div class="info-item">
-        <p>LinkedIn : <span><a href="https://www.linkedin.com/in/oussama-alouane" target="_blank">Mon profil</a></span></p>
-    </div>
+       <div class="info-item">
+  <p>
+    LinkedIn : 
+    <a class="linkedin-link" href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
+      Mon profil
+    </a>
+  </p>
+</div>
 </div>
 
 
@@ -287,28 +291,7 @@
     </div>
 </section>
 
- <script>
-        function calculerAge(dateNaissance) {
-            const aujourdHui = new Date();
-            const naissance = new Date(dateNaissance);
-            let age = aujourdHui.getFullYear() - naissance.getFullYear();
-            const m = aujourdHui.getMonth() - naissance.getMonth();
-            if (m < 0 || (m === 0 && aujourdHui.getDate() < naissance.getDate())) {
-                age--;
-            }
-            return age;
-        }
 
-        document.getElementById('age').textContent = calculerAge('2003-12-08') + " ans";
-    </script>
-    <script>
-    const toggler = document.querySelector(".oussama .nav-toggler");
-const sidebar = document.querySelector(".oussama");
-
-toggler.addEventListener("click", () => {
-  toggler.classList.toggle("active");
-  sidebar.classList.toggle("active");
-});
-</script>
+     <script src="script.js"></script>
 </body>
 </html>

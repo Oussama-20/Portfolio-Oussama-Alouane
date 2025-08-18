@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" type="images/png" href="images/Design sans titre.png">
+
 </head>
 <body>
      <div class="main-container">
@@ -34,8 +34,7 @@
     <li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
   </ul>
 </div>
-
-        <section class="contact section">
+<section class="contact section">
     <div class="container">
         <div class="row">
             <div class="section-title padd-15">
@@ -76,65 +75,66 @@
  <h3 class="contact-title padd-15">ENVOYEZ-MOI UN MESSAGE</h3>
  <h3 class="contact-sub-title padd-15">JE RÉPONDS RAPIDEMENT AUX MESSAGES </h3>
  <div class="row">
-  <form id="contact-form" class="contact-form padd-15">
-    <div class="row">
-      <div class="form-item col-6 padd-15">
-        <input type="text" id="prenom" class="form-control" placeholder="Prénom" required>
-      </div>
-      <div class="form-item col-6 padd-15">
-        <input type="text" id="nom" class="form-control" placeholder="Nom" required>
-      </div>
-    </div>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form padd-15">
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="f6f01f3b-38e1-4712-a54c-41ff979c9f59">
 
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <input type="email" id="email" class="form-control" placeholder="Adresse Email" required>
-      </div>
+  <!-- Champs du formulaire -->
+  <div class="row">
+    <div class="form-item col-6 padd-15">
+      <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Prénom" required>
     </div>
+    <div class="form-item col-6 padd-15">
+      <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom" required>
+    </div>
+  </div>
 
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <input type="text" id="sujet" class="form-control" placeholder="Sujet" required>
-      </div>
+  <div class="row">
+    <div class="form-item col-12 padd-15">
+      <input type="email" name="email" id="email" class="form-control" placeholder="Adresse Email" required>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <div class="form-group">
-          <textarea id="message" class="form-control" rows="6" placeholder="Votre message" required></textarea>
-        </div>
-      </div>
+  <div class="row">
+    <div class="form-item col-12 padd-15">
+      <input type="text" name="sujet" id="sujet" class="form-control" placeholder="Sujet" required>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <div id="error-msg" class="msg error">Veuillez remplir tous les champs correctement (max 50 lettres pour le message).</div>
-        <div id="success-msg" class="msg success">✅ Message envoyé avec succès !</div>
-      </div>
+  <div class="row">
+    <div class="form-item col-12 padd-15">
+      <textarea name="message" id="message" class="form-control" rows="6" placeholder="Votre message" required></textarea>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <button type="submit" class="btn">Envoyer</button>
-      </div>
-    </div>
-  </form>
+  <!-- Anti-spam -->
+   <input type="checkbox" name="botcheck" style="display:none;">
+   
+ <!-- Messages de réponse -->
+<div class="form-item col-12">
+  <div id="error-msg" class="msg error" style="display: none;">
+    ❌ Une erreur est survenue. Veuillez vérifier les champs.
+  </div>
+  <div id="success-msg" class="msg success" style="display: none;">
+    ✅ Merci ! Votre message a bien été envoyé.
+  </div>
 </div>
 
-
-
+  <!-- Bouton envoyer -->
+  <div class="row">
+    <div class="form-item col-12 padd-15">
+      <button type="submit" class="btn">Envoyer</button>
     </div>
+  </div>
+</form>
+
+
+</div>
+
+</div>
  
 </section>
 
-<script>
-    const toggler = document.querySelector(".oussama .nav-toggler");
-const sidebar = document.querySelector(".oussama");
-
-toggler.addEventListener("click", () => {
-  toggler.classList.toggle("active");
-  sidebar.classList.toggle("active");
-});
-</script>
+ <script src="script.js"></script>
 </body>
 </html>

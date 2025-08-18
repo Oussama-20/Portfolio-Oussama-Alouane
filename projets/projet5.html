@@ -7,7 +7,6 @@
 
   <!-- Icônes Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="icon" type="images/png" href="images/logo.png">
 
   <style>
     body {
@@ -56,7 +55,36 @@
       color: #555;
     }
 
-    /* Liste avec icônes (fonctionnalités) */
+    /* Listes générales */
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 20px 0;
+    }
+
+    ul li {
+      background: #f9f9f9;
+      margin-bottom: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: #444;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: #ffe4e8;
+    }
+
+    ul li i {
+      margin-right: 10px;
+      color: #ec1839;
+      font-size: 1.1rem;
+    }
+
+    /* Liste avec icônes (fonctionnalités CRUD) */
     .roles-list {
       list-style: none;
       padding: 0;
@@ -75,7 +103,7 @@
     }
 
     .roles-list li:hover {
-      background: #e8f9ee;
+      background: #ffe4e8;
     }
 
     .roles-list li i {
@@ -90,53 +118,12 @@
       color: #333;
     }
 
-    /* Liste technologies */
-    ul.tech-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0 0 20px 0;
-    }
-
-    ul.tech-list li {
-      background: #f9f9f9;
-      margin-bottom: 8px;
-      padding: 10px 14px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      color: #444;
-      transition: background 0.3s ease;
-    }
-
-    ul.tech-list li:hover {
-      background: #e8f9ee;
-    }
-
-    ul.tech-list li i {
-      margin-right: 10px;
-       color: #ec1839;
-      font-size: 1.1rem;
-    }
-
-    /* Image */
-    .project-image {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .project-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 2px solid #ddd;
-    }
-
     /* Bouton retour */
     .btn-back-home {
       display: inline-flex;
       align-items: center;
       margin-top: 25px;
-      background-color:#ec1839;;
+      background-color: #ec1839;
       color: white;
       padding: 10px 20px;
       border-radius: 30px;
@@ -160,9 +147,14 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
-      .container { padding: 25px; }
-      h1 { font-size: 2rem; }
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -176,9 +168,8 @@
     <p>
       Développer une application web permettant de gérer les informations des étudiants
       (ajout, lecture, mise à jour, suppression) à l'aide des opérations CRUD.
-      L’interface est simple, responsive et adaptée aux besoins scolaires.
+      L'interface est simple, responsive et adaptée aux besoins scolaires.
     </p>
-
 
     <!-- Fonctionnalités -->
     <h3><i class="fas fa-list-check"></i> Fonctionnalités principales</h3>
@@ -224,7 +215,7 @@
 
     <!-- Technologies -->
     <h3><i class="fas fa-tools"></i> Technologies utilisées</h3>
-    <ul class="tech-list">
+    <ul>
       <li><i class="fab fa-html5"></i> HTML5</li>
       <li><i class="fab fa-css3-alt"></i> CSS3</li>
       <li><i class="fab fa-bootstrap"></i> Bootstrap</li>

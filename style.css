@@ -1133,6 +1133,19 @@ h3.my-profession{
 }
 
 
+/* Lien LinkedIn بسيط و أنيق */
+.linkedin-link {
+  color: #0A66C2;                /* الأزرق الرسمي ديال LinkedIn */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.linkedin-link:hover {
+  color: #084d95;                /* أزرق أغمق ف hover */
+  border-bottom: 2px solid #0A66C2;
+}
 
 
 
