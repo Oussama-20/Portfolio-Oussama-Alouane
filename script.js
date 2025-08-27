@@ -74,3 +74,5 @@ toggler.addEventListener("click", () => {
   toggler.classList.toggle("active"); // Ajouter/enlever la classe "active" au bouton
   sidebar.classList.toggle("active"); // Ajouter/enlever la classe "active" à la sidebar pour l'ouvrir/fermer
 });
+
+

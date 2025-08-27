@@ -1,19 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Contact</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="color-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+  <style>
+    /* --- Bouton envoyer --- */
+    .contact .contact-form .btn {
+      background-color: var(--skin-color);
+      color: #fff;
+      width: 180px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .contact .contact-form .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    /* --- Messages (même style que index.html) --- */
+    .msg {
+      display: none;
+      margin: 20px 0;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.5;
+      position: relative;
+      animation: fadeIn 0.4s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .msg i {
+      margin-right: 10px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+
+    .msg.success {
+      background: #e9f9f0;
+      color: #0f9d58;
+      border-left: 5px solid #0f9d58;
+    }
+
+    .msg.error {
+      background: #fdecea;
+      color: #d93025;
+      border-left: 5px solid #d93025;
+    }
+
+    /* --- Animation --- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-     <div class="main-container">
-        <!-- Barre latérale -->
-                 <div class="oussama">
+  <div class="main-container">
+    <!-- Sidebar -->
+
+                     <div class="oussama">
   <div class="logo">
     <a href="#"><span>A</span>louane</a>
   </div>
@@ -34,107 +92,113 @@
     <li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
   </ul>
 </div>
-<section class="contact section">
-    <div class="container">
+
+    <!-- Section Contact -->
+    <section class="contact section">
+      <div class="container">
         <div class="row">
-            <div class="section-title padd-15">
-               <h2>Contactez-moi</h2>
-            </div>
+          <div class="section-title padd-15">
+            <h2>Contactez-moi</h2>
+          </div>
         </div>
+
         <h3 class="contact-title">Avez-vous une question ?</h3>
         <h3 class="contact-sub-title">Je suis à votre service</h3>
+
+        <!-- Infos Contact -->
         <div class="row">
-    <!-- Téléphone -->
-    <div class="contact-info-item padd-15">
-        <div class="icon"><i class="fa fa-phone"></i></div>
-        <h4>Appelez-moi</h4>
-        <p>+212 608740039</p>
-    </div>
+          <div class="contact-info-item padd-15">
+            <div class="icon"><i class="fa fa-phone"></i></div>
+            <h4>Appelez-moi</h4>
+            <p>+212 608740039</p>
+          </div>
 
-    <!-- Email -->
-    <div class="contact-info-item padd-15">
-        <div class="icon"><i class="fa fa-envelope"></i></div>
-        <h4>Email</h4>
-        <p>alouaneoussama07@gmail.com</p> <!-- Remplace par ton vrai email -->
-    </div>
+          <div class="contact-info-item padd-15">
+            <div class="icon"><i class="fa fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>alouaneoussama07@gmail.com</p> 
+          </div>
 
-    <!-- Nationalité -->
-    <div class="contact-info-item padd-15">
-        <div class="icon"><i class="fa fa-flag"></i></div>
-        <h4>Nationalité</h4>
-        <p>Marocain - Benslimane</p>
-    </div>
+          <div class="contact-info-item padd-15">
+            <div class="icon"><i class="fa fa-flag"></i></div>
+            <h4>Nationalité</h4>
+            <p>Marocain - Benslimane</p>
+          </div>
 
-    <!-- Disponibilité ou autre info -->
-    <div class="contact-info-item padd-15">
-        <div class="icon"><i class="fa fa-user-clock"></i></div>
-        <h4>Disponibilité</h4>
-        <p>Disponible à tout moment</p>
-    </div>
-</div>
- <h3 class="contact-title padd-15">ENVOYEZ-MOI UN MESSAGE</h3>
- <h3 class="contact-sub-title padd-15">JE RÉPONDS RAPIDEMENT AUX MESSAGES </h3>
- <div class="row">
-    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form padd-15">
-  <!-- Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="f6f01f3b-38e1-4712-a54c-41ff979c9f59">
+          <div class="contact-info-item padd-15">
+            <div class="icon"><i class="fa fa-user-clock"></i></div>
+            <h4>Disponibilité</h4>
+            <p>Disponible à tout moment</p>
+          </div>
+        </div>
 
-  <!-- Champs du formulaire -->
-  <div class="row">
-    <div class="form-item col-6 padd-15">
-      <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Prénom" required>
-    </div>
-    <div class="form-item col-6 padd-15">
-      <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom" required>
-    </div>
+        <!-- Formulaire -->
+        <h3 class="contact-title padd-15">ENVOYEZ-MOI UN MESSAGE</h3>
+        <h3 class="contact-sub-title padd-15">JE RÉPONDS RAPIDEMENT AUX MESSAGES</h3>
+
+        <div class="row">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form padd-15">
+            <input type="hidden" name="access_key" value="f6f01f3b-38e1-4712-a54c-41ff979c9f59">
+
+            <div class="row">
+              <div class="form-item col-6 padd-15">
+                <input type="text" name="prenom" class="form-control" placeholder="Prénom" required>
+              </div>
+              <div class="form-item col-6 padd-15">
+                <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-item col-12 padd-15">
+                <input type="email" name="email" class="form-control" placeholder="Adresse Email" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-item col-12 padd-15">
+                <input type="text" name="sujet" class="form-control" placeholder="Sujet" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-item col-12 padd-15">
+                <textarea name="message" class="form-control" rows="6" placeholder="Votre message" required></textarea>
+              </div>
+            </div>
+
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <!-- Messages -->
+            <div class="form-item col-12">
+              <div id="error-msg" class="msg error"><i class="fa fa-times-circle"></i> Une erreur est survenue. Veuillez vérifier les champs.</div>
+              <div id="success-msg" class="msg success"><i class="fa fa-check-circle"></i> Merci ! Votre message a bien été envoyé.</div>
+            </div>
+
+            <!-- Bouton -->
+            <div class="row">
+              <div class="form-item col-12 padd-15">
+                <button type="submit" class="btn">Envoyer</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </div>
+  <script>
+    // Code pour le menu (sidebar) toggle
+const toggler = document.querySelector(".oussama .nav-toggler"); // Bouton pour ouvrir/fermer le menu
+const sidebar = document.querySelector(".oussama"); // Sidebar/menu
 
-  <div class="row">
-    <div class="form-item col-12 padd-15">
-      <input type="email" name="email" id="email" class="form-control" placeholder="Adresse Email" required>
-    </div>
-  </div>
+// Ajouter un événement click sur le bouton
+toggler.addEventListener("click", () => {
+  toggler.classList.toggle("active"); // Ajouter/enlever la classe "active" au bouton
+  sidebar.classList.toggle("active"); // Ajouter/enlever la classe "active" à la sidebar pour l'ouvrir/fermer
+});
 
-  <div class="row">
-    <div class="form-item col-12 padd-15">
-      <input type="text" name="sujet" id="sujet" class="form-control" placeholder="Sujet" required>
-    </div>
-  </div>
+  </script>
 
-  <div class="row">
-    <div class="form-item col-12 padd-15">
-      <textarea name="message" id="message" class="form-control" rows="6" placeholder="Votre message" required></textarea>
-    </div>
-  </div>
-
-  <!-- Anti-spam -->
-   <input type="checkbox" name="botcheck" style="display:none;">
-   
- <!-- Messages de réponse -->
-<div class="form-item col-12">
-  <div id="error-msg" class="msg error" style="display: none;">
-    ❌ Une erreur est survenue. Veuillez vérifier les champs.
-  </div>
-  <div id="success-msg" class="msg success" style="display: none;">
-    ✅ Merci ! Votre message a bien été envoyé.
-  </div>
-</div>
-
-  <!-- Bouton envoyer -->
-  <div class="row">
-    <div class="form-item col-12 padd-15">
-      <button type="submit" class="btn">Envoyer</button>
-    </div>
-  </div>
-</form>
-
-
-</div>
-
-</div>
- 
-</section>
-
- <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

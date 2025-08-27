@@ -14,7 +14,7 @@
 <body>
     <div class="main-container">
         <!-- Barre latérale -->
-         <div class="oussama">
+        <div class="oussama">
   <div class="logo">
     <a href="#"><span>A</span>louane</a>
   </div>
@@ -163,107 +163,99 @@
     </div>
 
     <!-- Compétences -->
+     <div class="skills padd-15">
 
-<div class="skills padd-15">
-    <div class="row">
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-html5"></i> HTML</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 90%;"></div>
-                <div class="skill-percent">90%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-css3-alt"></i> CSS</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 80%;"></div>
-                <div class="skill-percent">80%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-bootstrap"></i> Bootstrap</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 85%;"></div>
-                <div class="skill-percent">85%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-js"></i> JavaScript</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 70%;"></div>
-                <div class="skill-percent">70%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-react"></i> React.js</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 80%;"></div>
-                <div class="skill-percent">80%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-laravel"></i> Laravel</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 80%;"></div>
-                <div class="skill-percent">85%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-php"></i> PHP</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 85%;"></div>
-                <div class="skill-percent">80%</div>
-            </div>
-        </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fas fa-coffee"></i>JAVA</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 60%;"></div>
-                <div class="skill-percent">60%</div>
-            </div>
-        </div>
-         <div class="skill-item padd-15">
-            <h5><i class="fas fa-database"></i> MySQL</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 80%;"></div>
-                <div class="skill-percent">80%</div>
-            </div>
-        </div>
-        <div class="skill-item padd-15">
-  <h5><i class="fas fa-database"></i> NoSQL</h5>
-  <div class="progress">
-    <div class="progress-in" style="width: 80%;"></div>
-    <span class="skill-percent">80%</span>
+  <!-- 1) HTML - CSS - Bootstrap -->
+  <div class="row">
+    <div class="skill-item padd-15">
+      <h5><i class="fab fa-html5"></i> HTML - CSS - Bootstrap</h5>
+      <div class="progress">
+        <div class="progress-in" style="width: 90%;"></div>
+        <div class="skill-percent">90%</div>
+      </div>
+    </div>
   </div>
-</div>
 
-        <div class="skill-item padd-15">
-    <h5><i class="fab fa-wordpress"></i> WordPress</h5>
-    <div class="progress">
+  <!-- 2) JavaScript - React -->
+  <div class="row">
+    <div class="skill-item padd-15">
+      <h5><i class="fab fa-js"></i> JavaScript - React.js</h5>
+      <div class="progress">
         <div class="progress-in" style="width: 80%;"></div>
         <div class="skill-percent">80%</div>
+      </div>
     </div>
+  </div>
+
+  <!-- 3) Laravel - PHP -->
+  <div class="row">
+    <div class="skill-item padd-15">
+      <h5><i class="fab fa-laravel"></i> Laravel - PHP</h5>
+      <div class="progress">
+        <div class="progress-in" style="width: 85%;"></div>
+        <div class="skill-percent">85%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) MySQL - NoSQL -->
+  <div class="row">
+    <div class="skill-item padd-15">
+      <h5><i class="fas fa-database"></i> MySQL - NoSQL</h5>
+      <div class="progress">
+        <div class="progress-in" style="width: 80%;"></div>
+        <div class="skill-percent">80%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5) WordPress - Git & GitHub -->
+  <div class="row">
+    <div class="skill-item padd-15">
+      <h5><i class="fab fa-wordpress"></i> WordPress - Git & GitHub</h5>
+      <div class="progress">
+        <div class="progress-in" style="width: 75%;"></div>
+        <div class="skill-percent">75%</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
+<style>
+.skills .row {
+  margin-bottom: 20px;
+}
 
-        <div class="skill-item padd-15">
-            <h5><i class="fab fa-github"></i> Git & GitHub</h5>
-            <div class="progress">
-                <div class="progress-in" style="width: 75%;"></div>
-                <div class="skill-percent">75%</div>
-            </div>
-        </div>
+.skill-item {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
 
-    </div>
-</div>
+.progress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.progress-in {
+  height: 100%;
+  background: #007bff;
+  border-radius: 5px;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+</style>
+
 
 </div>
 <!-- Formation & Expérience -->

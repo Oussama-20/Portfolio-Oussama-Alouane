@@ -185,9 +185,8 @@
                 <div class="skill-percent">80%</div>
             </div>
         </div>
-
-        <div class="skill-item padd-15">
-            <h5><i class="fas fa-java"></i>JAVA</h5>
+         <div class="skill-item padd-15">
+            <h5><i class="fas fa-coffee"></i>JAVA</h5>
             <div class="progress">
                 <div class="progress-in" style="width: 60%;"></div>
                 <div class="skill-percent">60%</div>
@@ -293,5 +292,17 @@
 
 
      <script src="script.js"></script>
+      <script>
+    // Code pour le menu (sidebar) toggle
+const toggler = document.querySelector(".oussama .nav-toggler"); // Bouton pour ouvrir/fermer le menu
+const sidebar = document.querySelector(".oussama"); // Sidebar/menu
+
+// Ajouter un événement click sur le bouton
+toggler.addEventListener("click", () => {
+  toggler.classList.toggle("active"); // Ajouter/enlever la classe "active" au bouton
+  sidebar.classList.toggle("active"); // Ajouter/enlever la classe "active" à la sidebar pour l'ouvrir/fermer
+});
+
+  </script>
 </body>
 </html>
