@@ -185,19 +185,100 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="propos.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <!-- Email -->
+        <a href="mailto:alouaneoussama07@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/Oussama-20" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/oussama___alouane/" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+        <div class="footer-bottom">
+            <p>© 2025 Oussama Alouane. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
   </div>
   <script>
-    // Code pour le menu (sidebar) toggle
-const toggler = document.querySelector(".oussama .nav-toggler"); // Bouton pour ouvrir/fermer le menu
-const sidebar = document.querySelector(".oussama"); // Sidebar/menu
+    // ------------------ Menu Sidebar ------------------
+const toggler = document.querySelector(".oussama .nav-toggler"); 
+const sidebar = document.querySelector(".oussama");
 
-// Ajouter un événement click sur le bouton
-toggler.addEventListener("click", () => {
-  toggler.classList.toggle("active"); // Ajouter/enlever la classe "active" au bouton
-  sidebar.classList.toggle("active"); // Ajouter/enlever la classe "active" à la sidebar pour l'ouvrir/fermer
-});
+if(toggler){
+  toggler.addEventListener("click", () => {
+    toggler.classList.toggle("active");
+    sidebar.classList.toggle("active");
+  });
+}
+  const contactForm = document.getElementById('contact-form');
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
 
-  </script>
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Empêche l'envoi normal du formulaire
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        successMsg.style.display = 'block'; // Affiche le message succès
+        errorMsg.style.display = 'none';    // Cache le message erreur
+        contactForm.reset();                 // Réinitialise le formulaire
+
+        setTimeout(() => {
+          successMsg.style.display = 'none'; // Masque après 4 secondes
+        }, 4000);
+      } else {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+
+        setTimeout(() => {
+          errorMsg.style.display = 'none';
+        }, 4000);
+      }
+
+    } catch (err) {
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'block';
+      setTimeout(() => {
+        errorMsg.style.display = 'none';
+      }, 4000);
+      console.error(err);
+    }
+  });
+</script>
+
 
   <script src="script.js"></script>
 </body>
