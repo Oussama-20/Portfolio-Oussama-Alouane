@@ -11,6 +11,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
 </head>
+<style>
+.skills .row {
+  margin-bottom: 20px;
+}
+
+.skill-item {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.progress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.progress-in {
+  height: 100%;
+  background: #007bff;
+  border-radius: 5px;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+</style>
 <body>
     <div class="main-container">
         <!-- Barre latérale -->
@@ -163,98 +196,77 @@
     </div>
 
     <!-- Compétences -->
-     <div class="skills padd-15">
 
-  <!-- 1) HTML - CSS - Bootstrap -->
-  <div class="row">
+    <div class="skills padd-15">
+
+  <div class="skills-grid">
+
+    <!-- 1) HTML - CSS - Bootstrap -->
     <div class="skill-item padd-15">
-      <h5><i class="fab fa-html5"></i> HTML - CSS - Bootstrap</h5>
+      <h5 class="skill-title">
+        <i class="fa-brands fa-html5 icon-html"></i>HTML
+        <i class="fa-brands fa-css3-alt icon-css"></i>CSS
+        <i class="fa-brands fa-bootstrap icon-bootstrap"></i>Bootstrap
+      </h5>
       <div class="progress">
         <div class="progress-in" style="width: 90%;"></div>
         <div class="skill-percent">90%</div>
       </div>
     </div>
-  </div>
 
-  <!-- 2) JavaScript - React -->
-  <div class="row">
+    <!-- 2) JavaScript - React -->
     <div class="skill-item padd-15">
-      <h5><i class="fab fa-js"></i> JavaScript - React.js</h5>
+      <h5 class="skill-title">
+        <i class="fa-brands fa-js icon-js"></i>JavaScript
+        <i class="fa-brands fa-react icon-react"></i>React.js
+      </h5>
       <div class="progress">
         <div class="progress-in" style="width: 80%;"></div>
-        <div class="skill-percent">80%</div>
+        <div class="skill-percent">85%</div>
       </div>
     </div>
-  </div>
 
-  <!-- 3) Laravel - PHP -->
-  <div class="row">
+    <!-- 3) Laravel - PHP -->
     <div class="skill-item padd-15">
-      <h5><i class="fab fa-laravel"></i> Laravel - PHP</h5>
+      <h5 class="skill-title">
+        <i class="fa-brands fa-laravel icon-laravel"></i>Laravel
+        <i class="fa-brands fa-php icon-php"></i>PHP
+      </h5>
       <div class="progress">
         <div class="progress-in" style="width: 85%;"></div>
         <div class="skill-percent">85%</div>
       </div>
     </div>
-  </div>
 
-  <!-- 4) MySQL - NoSQL -->
-  <div class="row">
+    <!-- 4) MySQL - NoSQL -->
     <div class="skill-item padd-15">
-      <h5><i class="fas fa-database"></i> MySQL - NoSQL</h5>
+      <h5 class="skill-title">
+        <i class="fa-solid fa-database icon-mysql"></i>MySQL
+        <i class="fa-brands fa-envira icon-mongo"></i>NoSQL
+      </h5>
       <div class="progress">
         <div class="progress-in" style="width: 80%;"></div>
-        <div class="skill-percent">80%</div>
+        <div class="skill-percent">85%</div>
       </div>
     </div>
-  </div>
 
-  <!-- 5) WordPress - Git & GitHub -->
-  <div class="row">
+    <!-- 5) WordPress - Git - GitHub -->
     <div class="skill-item padd-15">
-      <h5><i class="fab fa-wordpress"></i> WordPress - Git & GitHub</h5>
+      <h5 class="skill-title">
+        <i class="fa-brands fa-wordpress icon-wp"></i>WordPress
+        <i class="fa-brands fa-git-alt icon-git"></i>Git
+        <i class="fa-brands fa-github icon-github"></i>GitHub
+      </h5>
       <div class="progress">
         <div class="progress-in" style="width: 75%;"></div>
         <div class="skill-percent">75%</div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>
 
-<style>
-.skills .row {
-  margin-bottom: 20px;
-}
 
-.skill-item {
-  background: #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.progress {
-  background: #ddd;
-  height: 10px;
-  border-radius: 5px;
-  margin-top: 5px;
-  position: relative;
-}
-
-.progress-in {
-  height: 100%;
-  background: #007bff;
-  border-radius: 5px;
-}
-
-.skill-percent {
-  position: absolute;
-  right: 10px;
-  top: -20px;
-  font-size: 12px;
-  font-weight: bold;
-}
-</style>
 
 
 </div>
