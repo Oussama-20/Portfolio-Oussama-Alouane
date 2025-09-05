@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Oussama Alouane</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="color-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    .skills .row {
+      margin-bottom: 20px;
+    }
+
+    .skill-item {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .progress {
+      background: #ddd;
+      height: 10px;
+      border-radius: 5px;
+      margin-top: 5px;
+      position: relative;
+    }
+
+    .progress-in {
+      height: 100%;
+      background: #007bff;
+      border-radius: 5px;
+    }
+
+    .skill-percent {
+      position: absolute;
+      right: 10px;
+      top: -20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* Container */
+.lang-switch {
+  position: fixed;        /* Fixé en haut comme le menu */
+  top: 15px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;          /* Toujours au-dessus */
+}
+
+/* Links */
+.lang-switch .lang-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lang-switch .lang-link:hover {
+  color: #007BFF; /* Couleur au survol */
+}
+
+/* Responsive mode */
+@media (max-width: 768px) {
+  .lang-switch {
+    top: auto;
+    bottom: 15px;   /* Descend en bas à droite sur petit écran */
+    right: 15px;
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <div class="oussama">
+      <div class="logo">
+        <a href="#"><span>A</span>louane</a>
+      </div>
+
+      <!-- Menu button -->
+      <button class="nav-toggler" id="nav-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation -->
+      <ul class="nav" id="nav-menu">
+        <li><a href="index-en.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+        <li><a href="services.html"><i class="fa fa-list"></i> Services</a></li>
+        <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Home Section -->
+      <section class="home section">
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello">Hello, my name is <span class="name">Oussama Alouane</span></h3>
+              <h3 class="my-profession">I am a <span class="typing">Full-Stack Developer</span></h3>
+              <p>
+                <strong>Full-Stack Developer</strong> passionate about mastering modern web technologies.  
+                Creative and detail-oriented, I design efficient and innovative digital solutions.
+              </p>
+
+              <!-- Social icons -->
+              <div class="footer-social">
+                <a href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:alouaneoussama07@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Oussama-20" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/oussama___alouane/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Image + language switch -->
+            <div class="home-img padd-15" style="position: relative;">
+              <!-- 🔹 Language Switch -->
+<div class="lang-switch">
+  <a href="index.html" class="lang-link">FR</a>
+  <span>|</span>
+  <a href="index-en.html" class="lang-link">EN</a>
+</div>
+
+              <img src="images/img oussama.jpg" alt="Oussama Alouane" style="border-radius: 10px;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about section">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>About Me</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="about-content padd-15">
+              <!-- Intro text -->
+              <div class="row">
+                <div class="about-text padd-15">
+                  <h3>I am Oussama Alouane, <span>Full-Stack Developer</span></h3>
+                  <p>
+                    What sets me apart in the field of <strong>web development</strong> is my daily discipline and continuous commitment to learning.  
+                    For me, web development is not just a profession it is a true passion that I cultivate with rigor and perseverance.  
+                    I approach each challenge as an opportunity to improve, always seeking to deepen my skills and design smart, high-performance digital solutions.  
+                    This dedication drives me to deliver high-quality, stable, and user-centered projects, even under pressure.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Personal Information -->
+                <div class="personal-info padd-15">
+                  <div class="row">
+                    <div class="info-item"><p>Date of Birth: <span>Dec 08, 2003</span></p></div>
+                    <div class="info-item"><p>Age: <span id="age"></span></p></div>
+                    <div class="info-item"><p>Driver's License: <span>B</span></p></div>
+                    <div class="info-item"><p>Status: <span>Available</span></p></div>
+                    <div class="info-item"><p>Experience: <span>6 months</span></p></div>
+                    <div class="info-item"><p>Availability: <span>Immediate</span></p></div>
+                    <div class="info-item"><p>Nationality: <span>Moroccan</span></p></div>
+                    <div class="info-item"><p>Languages: <span>Arabic, French, English</span></p></div>
+                    <div class="info-item"><p>Phone: <span>+212 6 08 74 00 39</span></p></div>
+                    <div class="info-item"><p>Address: <span>Benslimane, Morocco</span></p></div>
+                    <div class="info-item"><p>Email: <span>alouaneoussama07@gmail.com</span></p></div>
+                    <div class="info-item">
+                      <p>
+                        LinkedIn:
+                        <a class="linkedin-link" href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
+                          My Profile
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="buttons padd-15">
+                      <a href="assets/IMG_1112.pdf" class="btn" download="CV_Oussama_Alouane.pdf">Download CV</a>
+                      <a href="contact.html" class="btn">Contact Me</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="skills padd-15">
+                  <div class="skills-grid">
+                    <!-- 1) HTML - CSS - Bootstrap -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-brands fa-html5 icon-html"></i>HTML
+                        <i class="fa-brands fa-css3-alt icon-css"></i>CSS
+                        <i class="fa-brands fa-bootstrap icon-bootstrap"></i>Bootstrap
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 90%"></div>
+                        <div class="skill-percent">85%</div>
+                      </div>
+                    </div>
+
+                    <!-- 2) JavaScript - React -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-brands fa-js icon-js"></i>JavaScript
+                        <i class="fa-brands fa-react icon-react"></i>React.js
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 80%"></div>
+                        <div class="skill-percent">75%</div>
+                      </div>
+                    </div>
+
+                    <!-- 3) Laravel - PHP - Java -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-brands fa-laravel icon-laravel"></i>Laravel
+                        <i class="fa-brands fa-php icon-php"></i>PHP
+                        <i class="fa-brands fa-java icon-java"></i>Java
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 85%"></div>
+                        <div class="skill-percent">75%</div>
+                      </div>
+                    </div>
+
+                    <!-- 4) MySQL - NoSQL - SQL Server -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-solid fa-database icon-mysql"></i>MySQL
+                        <i class="fa-brands fa-envira icon-mongo"></i>NoSQL
+                        <i class="fa-solid fa-database icon-mysql"></i>SQL Server
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 80%"></div>
+                        <div class="skill-percent">80%</div>
+                      </div>
+                    </div>
+
+                    <!-- 5) Git - GitHub -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-brands fa-git-alt icon-git"></i>Git
+                        <i class="fa-brands fa-github icon-github"></i>GitHub
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 75%"></div>
+                        <div class="skill-percent">75%</div>
+                      </div>
+                    </div>
+
+                    <!-- 6) WordPress -->
+                    <div class="skill-item padd-15">
+                      <h5 class="skill-title">
+                        <i class="fa-brands fa-wordpress icon-wp"></i>WordPress
+                      </h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 75%"></div>
+                        <div class="skill-percent">75%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education & Experience -->
+              <div class="row">
+                <!-- Education -->
+                <div class="education padd-15" style="width: 50%;">
+                  <h3 class="title">Education</h3>
+                  <div class="timeline-box padd-15">
+                    <div class="timeline shadow-dark">
+                      <!-- Item 1 -->
+                      <div class="timeline-item">
+                        <span class="circle-dot"></span>
+                        <div class="timeline-content">
+                          <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2024 - 2025</h3>
+                          <h4 class="timeline-title">Bachelor’s Degree in Computer Systems Engineering</h4>
+                          <p class="timeline-text">SupMTI, Rabat</p>
+                        </div>
+                      </div>
+                      <!-- Item 2 -->
+                      <div class="timeline-item">
+                        <span class="circle-dot"></span>
+                        <div class="timeline-content">
+                          <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2022 - 2024</h3>
+                          <h4 class="timeline-title">Advanced Technician Diploma in Digital Development</h4>
+                          <p class="timeline-text">Specialized Institute of Applied Technology, Benslimane</p>
+                        </div>
+                      </div>
+                      <!-- Item 3 -->
+                      <div class="timeline-item">
+                        <span class="circle-dot"></span>
+                        <div class="timeline-content">
+                          <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2021 - 2022</h3>
+                          <h4 class="timeline-title">Baccalaureate in Physical Sciences</h4>
+                          <p class="timeline-text">Hassan II High School, Benslimane</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="education padd-15" style="width: 50%;">
+                  <h3 class="title">Experience</h3>
+                  <div class="timeline-box padd-15">
+                    <div class="timeline shadow-dark">
+                      <!-- Item 1 -->
+                      <div class="timeline-item">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date"><i class="fa fa-calendar"></i> April 2025 - July 2025</h3>
+                        <h4 class="timeline-title">Final Year Project (FYP) - SupMTI Rabat</h4>
+                        <p class="timeline-text">Design and deployment of a digital platform for farmers’ empowerment.</p>
+                      </div>
+                      <!-- Item 2 -->
+                      <div class="timeline-item">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date"><i class="fa fa-calendar"></i> October 2024 - December 2024</h3>
+                        <h4 class="timeline-title">Internship - Moony Company, Bouznika</h4>
+                        <p class="timeline-text">Development of an employee and payroll management application.</p>
+                      </div>
+                      <!-- Item 3 -->
+                      <div class="timeline-item">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date"><i class="fa fa-calendar"></i> July 2024 - August 2024</h3>
+                        <h4 class="timeline-title">Internship - La Proviance, Benslimane</h4>
+                        <p class="timeline-text">Development of a trainee management application.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- End Education & Experience -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services -->
+<section class="service section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title padd-15">
+        <h2>Services</h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-mobile-alt"></i></div>
+          <h4>Responsive Design</h4>
+          <p>High-performance websites adaptable to all screen sizes and browsers.</p>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-laptop-code"></i></div>
+          <h4>Web Development</h4>
+          <p>Dynamic websites using HTML, CSS, JavaScript, PHP, Laravel, and more.</p>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-palette"></i></div>
+          <h4>UI/UX Design</h4>
+          <p>Modern designs with intuitive and user-friendly experiences.</p>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-search"></i></div>
+          <h4>SEO Optimization</h4>
+          <p>Improving your visibility and ranking on search engines.</p>
+        </div>
+      </div>
+      <!-- Service 5 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-bullhorn"></i></div>
+          <h4>Digital Marketing</h4>
+          <p>Communication strategies and promotion on social media platforms.</p>
+        </div>
+      </div>
+      <!-- Service 6 -->
+      <div class="service-item padd-15">
+        <div class="service-item-inner">
+          <div class="icon"><i class="fa fa-code"></i></div>
+          <h4>Web Applications</h4>
+          <p>Custom and high-performance web application development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio -->
+<section class="service section" id="portfolio">
+  <div class="container">
+    <!-- Title -->
+    <div class="row">
+      <div class="section-title padd-15">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="row">
+      <div class="portfolio-heading padd-15">
+        <h3>My Latest Projects:</h3>
+      </div>
+    </div>
+
+    <!-- Project List -->
+    <div class="row portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-item-inner">
+          <img src="images/projet1.jpg" alt="Final Project - SupMTI Rabat">
+          <h4>Final Project - SupMTI Rabat</h4>
+          <a href="projets/projet1.html" class="project-btn">View more</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item padd-15">
+        <div class="portfolio-item-inner">
+          <img src="images/projet freelance .png" alt="Freelance Project - Journalism Website">
+          <h4>Freelance Project - Journalism</h4>
+          <a href="projets/projet4.html" class="project-btn">View more</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-item-inner">
+          <img src="images/projet 4.png" alt="Internship Project - Moony">
+          <h4>Internship Project - Moony</h4>
+          <a href="projets/projet2.html" class="project-btn">View more</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-item-inner">
+          <img src="images/projet 3.png" alt="Final Study Project - ISTA Benslimane">
+          <h4>Final Study Project - ISTA Benslimane</h4>
+          <a href="projets/projet3.html" class="project-btn">View more</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-item-inner">
+          <img src="images/projet 5.jpg" alt="Internship Project - Proviance Benslimane">
+          <h4>Internship Project - Proviance Benslimane</h4>
+          <a href="projets/projet5.html" class="project-btn">View more</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-item-inner">
+          <img src="images/photos.webp" alt="E-commerce Project" />
+          <h4>Project - E-commerce</h4>
+          <a href="projets/projet6.html" class="project-btn">View more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+<section class="contact section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title padd-15">
+        <h2>Contact Me</h2>
+      </div>
+    </div>
+
+    <h3 class="contact-title">Do you have a question?</h3>
+    <h3 class="contact-sub-title">I am at your service</h3>
+
+    <div class="row">
+      <!-- Phone -->
+      <div class="contact-info-item padd-15">
+        <div class="icon"><i class="fa fa-phone"></i></div>
+        <h4>Call Me</h4>
+        <p>+212 608740039</p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-info-item padd-15">
+        <div class="icon"><i class="fa fa-envelope"></i></div>
+        <h4>Email</h4>
+        <p>alouaneoussama07@gmail.com</p>
+      </div>
+
+      <!-- Nationality -->
+      <div class="contact-info-item padd-15">
+        <div class="icon"><i class="fa fa-flag"></i></div>
+        <h4>Nationality</h4>
+        <p>Moroccan - Benslimane</p>
+      </div>
+
+      <!-- Availability -->
+      <div class="contact-info-item padd-15">
+        <div class="icon"><i class="fa fa-user-clock"></i></div>
+        <h4>Availability</h4>
+        <p>Available anytime</p>
+      </div>
+    </div>
+
+    <h3 class="contact-title padd-15">SEND ME A MESSAGE</h3>
+    <h3 class="contact-sub-title padd-15">I RESPOND QUICKLY TO MESSAGES</h3>
+
+    <div class="row">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        id="contact-form"
+        class="contact-form padd-15"
+      >
+        <!-- Web3Forms Access Key -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="f6f01f3b-38e1-4712-a54c-41ff979c9f59"
+        />
+
+        <!-- Form fields -->
+        <div class="row">
+          <div class="form-item col-6 padd-15">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              class="form-control"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="form-item col-6 padd-15">
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              class="form-control"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-item col-12 padd-15">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-item col-12 padd-15">
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              class="form-control"
+              placeholder="Subject"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-item col-12 padd-15">
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              rows="6"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Anti-spam -->
+        <input type="checkbox" name="botcheck" style="display: none" />
+
+        <!-- Response Messages -->
+        <div class="form-item col-12">
+          <div id="error-msg" class="msg error" style="display: none">
+            ❌ An error occurred. Please check the fields.
+          </div>
+          <div id="success-msg" class="msg success" style="display: none">
+            ✅ Thank you! Your message has been successfully sent.
+          </div>
+        </div>
+
+        <!-- Send button -->
+        <div class="row">
+          <div class="form-item col-12 padd-15">
+            <button type="submit" class="btn">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Navigation -->
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="propos.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer-social">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- Email -->
+      <a href="mailto:alouaneoussama07@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/Oussama-20" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/oussama___alouane/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 <strong>Oussama Alouane</strong>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+
+  <script>
+    // Function to calculate age from birthdate
+    function calculateAge(birthDate) {
+      const today = new Date();
+      const birth = new Date(birthDate);
+      let age = today.getFullYear() - birth.getFullYear();
+      const m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+        age--;
+      }
+      return age;
+    }
+    document.getElementById('age').textContent = calculateAge('2003-12-08') + " years";
+  </script>
+</body>
+</html>

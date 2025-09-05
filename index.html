@@ -43,6 +43,44 @@
   font-size: 12px;
   font-weight: bold;
 }
+/* Container */
+.lang-switch {
+  position: fixed;        /* Fixé en haut comme le menu */
+  top: 15px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;          /* Toujours au-dessus */
+}
+
+/* Links */
+.lang-switch .lang-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lang-switch .lang-link:hover {
+  color: #007BFF; /* Couleur au survol */
+}
+
+/* Responsive mode */
+@media (max-width: 768px) {
+  .lang-switch {
+    top: auto;
+    bottom: 15px;   /* Descend en bas à droite sur petit écran */
+    right: 15px;
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
 
 </style>
 <body>
@@ -59,7 +97,7 @@
     <span></span>
     <span></span>
   </button>
-
+  
   <!-- Navigation -->
   <ul class="nav" id="nav-menu">
     <li><a href="index.html"><i class="fa fa-home"></i> Accueil</a></li>
@@ -74,38 +112,51 @@
          <div class="main-content">
             <!-- Section Accueil -->
              <section class="home section">
-                 <div class="container">
-        <div class="row">
-            <div class="home-info padd-15">
-                <h3 class="hello">Bonjour, je m'appelle <span class="name">Oussama Alouane</span></h3>
-                <h3 class="my-profession">Je suis <span class="typing">Développeur Full-Stack</span></h3>
-                <p> <strong>Développeur Full Stack</strong> passionné, maîtrisant les technologies web modernes.Créatif et rigoureux, je conçois des solutions digitales performantes et innovantes.</p>
-                <!-- Bouton + icônes alignés -->
-                 <div class="footer-social">
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <!-- Email -->
-                     <a href="mailto:alouaneoussama07@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <!-- GitHub -->
-                     <a href="https://github.com/Oussama-20" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <!-- Instagram -->
-                     <a href="https://www.instagram.com/oussama___alouane/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="home-img padd-15">
-                <img src="images/img oussama.jpg" alt="Oussama Alouane">
-            </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="home-info padd-15">
+        <h3 class="hello">Bonjour, je m'appelle <span class="name">Oussama Alouane</span></h3>
+        <h3 class="my-profession">Je suis <span class="typing">Développeur Full-Stack</span></h3>
+        <p>
+          <strong>Développeur Full Stack</strong> passionné, maîtrisant les technologies web modernes.
+          Créatif et rigoureux, je conçois des solutions digitales performantes et innovantes.
+        </p>
+
+        <!-- Bouton + icônes alignés -->
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/oussama-alouane-29bba1361/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:alouaneoussama07@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/Oussama-20" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/oussama___alouane/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
+      </div>
+
+      <!-- Image + langue -->
+      <div class="home-img padd-15" style="position: relative;">
+        <!-- 🔹 Sélecteur de langue -->
+         <!-- Lang Switch -->
+<div class="lang-switch">
+  <a href="index.html" class="lang-link">FR</a>
+  <span>|</span>
+  <a href="index-en.html" class="lang-link">EN</a>
+</div>
+
+        <img src="images/img oussama.jpg" alt="Oussama Alouane" style="border-radius: 10px;">
+      </div>
+
     </div>
+  </div>
 </section>
+
 
 
             <!-- Section À propos -->
@@ -621,7 +672,7 @@
     </a>
 </div>
         <div class="footer-bottom">
-            <p>© 2025 Oussama Alouane. Tous droits réservés.</p>
+            <p>© 2025 <strong>Oussama Alouane</strong>. Tous droits réservés.</p>
         </div>
     </div>
 </footer>
